@@ -119,7 +119,9 @@
             android:label="@string/action_tutorial" />
 
         //Add feature 3
-
+        <activity
+            android:name=".ui.activities.HelpActivity"
+            android:label="@string/action_help" />
 
         <activity
             android:name=".ui.activities.intro.AppIntroActivity"

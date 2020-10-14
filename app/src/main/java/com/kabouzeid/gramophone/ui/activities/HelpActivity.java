@@ -1,4 +1,74 @@
 package com.kabouzeid.gramophone.ui.activities;
 
-public class HelpActivity {
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
+
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.gramophone.R;
+import com.kabouzeid.gramophone.dialogs.HelpDialog;
+import com.kabouzeid.gramophone.dialogs.TutorialDialog;
+import com.kabouzeid.gramophone.ui.activities.base.AbsBaseActivity;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+public class HelpActivity extends AbsBaseActivity implements View.OnClickListener {
+
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.help)
+    LinearLayout help;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_help);
+        setDrawUnderStatusbar();
+        ButterKnife.bind(this);
+
+        setStatusbarColorAuto();
+        setNavigationbarColorAuto();
+        setTaskDescriptionColorAuto();
+
+
+        setUpViews();
+    }
+
+    private void setUpViews() {
+        setUpToolbar();
+        setUpOnClickListeners();
+    }
+
+    private void setUpToolbar() {
+        toolbar.setBackgroundColor(ThemeStore.primaryColor(this));
+        setSupportActionBar(toolbar);
+        //noinspection ConstantConditions
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    private void setUpOnClickListeners() {
+        help.setOnClickListener(this);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == help){
+            HelpDialog.create().show(getSupportFragmentManager(), "HELP_DIALOG");
+        }
+    }
 }

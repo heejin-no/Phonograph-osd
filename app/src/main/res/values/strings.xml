@@ -313,4 +313,5 @@
     <string name="tutorial">Tutorial</string>
     <string name="action_tutorial">Tutorial</string>
     <string name="action_help">Help</string>
+    <string name="help">Help</string>
 </resources>
