@@ -3,7 +3,9 @@ package com.kabouzeid.gramophone.dialogs;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.InflateException;
 import android.view.LayoutInflater;
@@ -26,6 +28,7 @@ import java.io.InputStreamReader;
 
 public class HelpDialog extends DialogFragment {
     public static HelpDialog create() { return new HelpDialog(); }
+
 
     @SuppressLint("InflateParams")
     @NonNull
@@ -85,6 +88,7 @@ public class HelpDialog extends DialogFragment {
     private static String colorToCSS(int color) {
         return String.format("rgb(%d, %d, %d)", Color.red(color), Color.green(color), Color.blue(color)); // on API 29, WebView doesn't load with hex colors
     }
+
 
 }
 
