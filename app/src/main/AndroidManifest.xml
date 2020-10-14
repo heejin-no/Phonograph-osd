@@ -113,10 +113,13 @@
             android:name=".ui.activities.AboutActivity"
             android:label="@string/action_about" />
 
-        //기능추가
+        //Add feature 2
         <activity
             android:name=".ui.activities.TutorialActivity"
             android:label="@string/action_tutorial" />
+
+        //Add feature 3
+
 
         <activity
             android:name=".ui.activities.intro.AppIntroActivity"

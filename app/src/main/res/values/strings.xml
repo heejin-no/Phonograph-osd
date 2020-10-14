@@ -312,4 +312,5 @@
     <string name="dialog_ringtone_message">Allow phonograph to modify audio settings</string>
     <string name="tutorial">Tutorial</string>
     <string name="action_tutorial">Tutorial</string>
+    <string name="action_help">Help</string>
 </resources>
