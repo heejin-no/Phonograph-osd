@@ -196,6 +196,10 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
                 case R.id.nav_about:
                     new Handler().postDelayed(() -> startActivity(new Intent(MainActivity.this, AboutActivity.class)), 200);
                     break;
+                    //Add feature2
+                case R.id.nav_tutorial:
+                    new Handler().postDelayed(() -> startActivity(new Intent(MainActivity.this, TutorialActivity.class)), 200);
+                    break;
             }
             return true;
         });

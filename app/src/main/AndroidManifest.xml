@@ -112,6 +112,12 @@
         <activity
             android:name=".ui.activities.AboutActivity"
             android:label="@string/action_about" />
+
+        //기능추가
+        <activity
+            android:name=".ui.activities.TutorialActivity"
+            android:label="@string/action_tutorial" />
+
         <activity
             android:name=".ui.activities.intro.AppIntroActivity"
             android:label="@string/intro_label"
